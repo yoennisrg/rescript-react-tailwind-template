@@ -2,6 +2,9 @@
   "name": "vite-react",
   "version": "0.0.0",
   "scripts": {
+    "format": "npm run format:js && npm run format:res",
+    "format:js": "prettier --write \"**/*.{js,json,jsx}\"",
+    "format:res": "rescript format -all",
     "build:rescript": "rescript",
     "clean": "rescript clean -with-deps",
     "dev": "vite",
