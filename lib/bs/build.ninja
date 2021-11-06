@@ -1,0 +1,18 @@
+rescript = 1
+g_finger := E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@rescript\react\lib\ocaml\install.stamp
+g_finger := E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@ryyppy\rescript-promise\lib\ocaml\install.stamp
+rule astj
+  command = "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\win32\bsc.exe"  -warn-error +101 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src\Main.ast : astj ..\..\src\Main.res
+rule deps
+  command = "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\win32\bsb_helper.exe" -hash a00ddc4ccfe6f153fc20e4cc16e79ae4 $in
+  restat = 1
+o src\Main.d : deps src\Main.ast
+rule mij
+  command = "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\win32\bsc.exe" -I "src\components" -I "src\containers\App" -I "src\containers" -I "src\layouts" -I "src\static" -I src -I "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@rescript\react\lib\ocaml" -I "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@ryyppy\rescript-promise\lib\ocaml"   -warn-error +101 -bs-package-name hello-rescript -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src\Main.cmj src\Main.cmi ..\..\src\Main.bs.js : mij src\Main.ast
+o src\containers\App\App.ast : astj ..\..\src\containers\App\App.res
+o src\containers\App\App.d : deps src\containers\App\App.ast
+o src\containers\App\App.cmj src\containers\App\App.cmi ..\..\src\containers\App\App.bs.js : mij src\containers\App\App.ast

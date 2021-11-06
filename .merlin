@@ -1,0 +1,14 @@
+####{BSB GENERATED: NO EDIT
+FLG -ppx "E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\win32\bsc.exe -as-ppx -bs-jsx 3"
+S E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\lib\ocaml
+B E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\rescript\lib\ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@rescript\react\lib\ocaml
+B E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@rescript\react\lib\ocaml
+S E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@ryyppy\rescript-promise\lib\ocaml
+B E:\repository\local_projects\react_frontend\_project_testing\vite-rescript-react-tailwind\node_modules\@ryyppy\rescript-promise\lib\ocaml
+S src
+B lib\bs\src
+S src\containers\App
+B lib\bs\src\containers\App
+####BSB GENERATED: NO EDIT}
